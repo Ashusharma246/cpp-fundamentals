@@ -1,0 +1,21 @@
+1. Loops
+2. Pointers
+
+Data Structures:
+
+1. Arrays
+2. Linked Lists
+3. Trees
+4. Heaps
+4. Graphs
+
+Algorithms:
+
+1. Time complexity analysis
+2. Dynamic Programming
+3. Greedy
+4. Divide and conquer
+
+OOPS:
+
+Dev:

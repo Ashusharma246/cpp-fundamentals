@@ -1,0 +1,7 @@
+/*
+struct{
+    int mynum;//structure declration
+    string mynum;//memeber(int variable)
+
+}mystructure;//structure variable
+*/
