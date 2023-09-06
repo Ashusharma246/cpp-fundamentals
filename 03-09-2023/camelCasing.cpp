@@ -4,7 +4,13 @@ int main()
 {
     string str = "Ashu sharma";
     string str1 = "";
-    for (int i = 0; i < str.length(); i++)
+    int i = 0, count = 0;
+    while (str[i] != '\0')
+    {
+        i++;
+        count++;
+    }
+    for (int i = 0; i < count; i++)
     {
         if (i == 0)
         {
@@ -17,7 +23,6 @@ int main()
         {
             str1 += str[i];
         }
-
         else
         {
             if (str[i + 1] >= 97 && str[i + 1] <= 122)

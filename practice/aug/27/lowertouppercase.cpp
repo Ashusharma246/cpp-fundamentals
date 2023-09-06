@@ -2,14 +2,13 @@
 using namespace std;
 int main()
 {
-    int n;
-    cin >> n;
-    int i = n;
-    int count = 0;
-    while (i != 0)
+    string str;
+    cin >> str;
+    int i = 0, count = 0;
+    while (str[i] != '\0')
     {
-        i = i / 10;
         count++;
+        i++;
     }
     cout << count;
     return 0;

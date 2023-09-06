@@ -7,8 +7,7 @@ int main()
 
     cin >> str;
 
-    // lowercase to uppercase
-    for (int i = 0; i < str.length(); i++)
+     for (int i = 0; i < str.length(); i++)
     {
         if (str[i] >= 97 && str[i] <= 122)
         {
