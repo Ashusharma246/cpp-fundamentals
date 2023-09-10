@@ -1,0 +1,10 @@
+float max = student[i].totalmarks;
+int maxindex = 0;
+for (int i = 0; i < num; i++)
+{
+    if (student[i].totalmarks >= max)
+    {
+        max = student[i].totalmarks;
+        maxindex = i;
+    }
+}

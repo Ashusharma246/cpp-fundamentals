@@ -15,14 +15,13 @@ struct rectangle
 int main()
 {
     int num = 1;
-    struct rectangle area[1];
-    for (int i = 0; i < num; i++)
-    {
-        cout << "enter length: ";
-        cin >> area->lenght;
-        cout << "enter breadth: ";
-        cin >> area->width;
-        cout << "area of the rectangle is: " << area->lenght * area->width << endl;
-    }
+    struct rectangle area;
+
+    cout << "enter length: ";
+    cin >> area.lenght;
+    cout << "enter breadth: ";
+    cin >> area.width;
+    cout << "area of the rectangle is: " << area.lenght * area.width << endl;
+
     return 0;
 }
