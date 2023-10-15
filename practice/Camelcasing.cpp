@@ -2,14 +2,14 @@
 using namespace std;
 int main()
 {
-    string str = "Ashu sharma";
+    string str = "Ashu SHARMA";
     int i = 0, count = 0;
     while (str[i] != '\0')
     {
         count++;
         i++;
     }
-    cout << count;
+
     string str1 = "";
     for (int i = 0; i < count; i++)
     {
@@ -19,7 +19,6 @@ int main()
             {
                 str1 += str[i] + 32;
             }
-            cout << "condition1" << endl;
         }
         else if (str[i] != 32)
         {
@@ -31,7 +30,6 @@ int main()
             {
                 str[i + 1] = str[i + 1] - 32;
             }
-            cout << "condition3" << endl;
         }
     }
 

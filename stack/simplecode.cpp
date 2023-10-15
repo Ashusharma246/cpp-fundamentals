@@ -4,16 +4,16 @@ using namespace std;
 class Stack
 {
 private:
-    int *arr;
-    int top;
-    int maxSize;
+    int *arr;    // Pointer to an array for storing stack elements
+    int top;     // Index of the top element in the stack
+    int maxSize; // Maximum size of the stack
 
 public:
     Stack(int size)
     {
         maxSize = size;
-        arr = new int[maxSize];
-        top = -1;
+        arr = new int[maxSize]; // Dynamically allocate memory for the stack
+        top = -1;               // Initialize top to -1 to indicate an empty stack
     }
 
     void push(int value)
@@ -24,7 +24,7 @@ public:
         }
         else
         {
-            arr[++top] = value;
+            arr[++top] = value; // Increment top and add the value to the stack
             cout << value << " pushed onto the stack." << endl;
         }
     }
@@ -37,7 +37,7 @@ public:
         }
         else
         {
-            cout << arr[top--] << " popped from the stack." << endl;
+            cout << arr[top--] << " popped from the stack." << endl; // Remove and decrement top
         }
     }
 
@@ -49,23 +49,23 @@ public:
         }
         else
         {
-            cout << "Top element: " << arr[top] << endl;
+            cout << "Top element: " << arr[top] << endl; // Display the top element
         }
     }
 
     bool isEmpty()
     {
-        return top == -1;
+        return top == -1; // Check if the stack is empty
     }
 
     bool isFull()
     {
-        return top == maxSize - 1;
+        return top == maxSize - 1; // Check if the stack is full
     }
 
     int size()
     {
-        return top + 1;
+        return top + 1; // Return the number of elements in the stack
     }
 };
 
@@ -97,16 +97,16 @@ int main()
             int value;
             cout << "Enter value to push: ";
             cin >> value;
-            stack.push(value);
+            stack.push(value); // Call the push method to add a value to the stack
             break;
         case 2:
-            stack.pop();
+            stack.pop(); // Call the pop method to remove the top element from the stack
             break;
         case 3:
-            stack.peek();
+            stack.peek(); // Call the peek method to view the top element of the stack
             break;
         case 4:
-            if (stack.isEmpty())
+            if (stack.isEmpty()) // Check if the stack is empty using the isEmpty method
             {
                 cout << "Stack is empty." << endl;
             }
@@ -116,7 +116,7 @@ int main()
             }
             break;
         case 5:
-            if (stack.isFull())
+            if (stack.isFull()) // Check if the stack is full using the isFull method
             {
                 cout << "Stack is full." << endl;
             }
@@ -126,7 +126,7 @@ int main()
             }
             break;
         case 6:
-            cout << "Stack size: " << stack.size() << endl;
+            cout << "Stack size: " << stack.size() << endl; // Get the stack size using the size method
             break;
         case 7:
             cout << "Exiting program." << endl;

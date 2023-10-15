@@ -16,7 +16,7 @@ int main()
     {
         if (i == 0)
         {
-            if (str[i] >= 65 && str[i] <= 90)
+            if (str[i] >= 'A' && str[i] <= 'Z')
             {
                 str1 += str[i] + 32;
             }
@@ -28,7 +28,7 @@ int main()
 
         else
         {
-            if (str[i + 1] >= 97 && str[i + 1] <= 122)
+            if (str[i + 1] >= 'a' && str[i + 1] <= 'z')
             {
                 str[i + 1] = str[i + 1] - 32;
             }

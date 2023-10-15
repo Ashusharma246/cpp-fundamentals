@@ -75,44 +75,22 @@ int main()
             cout << "Book ISBN: " << newbook[i].ISBN << endl;
             cout << "Book Price: " << newbook[i].Price << endl;
         }
-    }
-    string isbn;
-    cout << "enter book ISBN that ypu wants to search: " << endl;
-    cin >> isbn;
-    if (newbook == "Y" || newbook == "y")
-    {
-        int num2;
-        cout << "How many number of books you want to add: ";
-        cin >> num2;
-
-        for (int i = num; i < num + num2; i++)
-        {
-            cout << "Enter title of the book: ";
-            cin >> books[i].Title;
-            cout << "Enter Author name: ";
-            cin >> books[i].Author;
-            cout << "Enter ISBN: ";
-            cin >> books[i].ISBN;
-            cout << "Enter Price: ";
-            cin >> books[i].Price;
-        }
-
         num += num2;
     }
 
-    string isbn;
-    cout << "Enter book ISBN that you want to search: ";
-    cin >> isbn;
+    string bookisbn = "";
+    cout << "enter the isbn of the book that you want search: " << endl;
+    cin >> bookisbn;
 
     bool found = false;
     for (int i = 0; i < num; i++)
     {
-        if (books[i].ISBN == isbn)
+        if (book[i].ISBN == bookisbn || newbook[i].ISBN == bookisbn)
         {
-            cout << "Book Title: " << books[i].Title << endl;
-            cout << "Book Author: " << books[i].Author << endl;
-            cout << "Book ISBN: " << books[i].ISBN << endl;
-            cout << "Book Price: " << books[i].Price << endl;
+            cout << "Book Title: " << book[i].Title || newbook[i].Title << endl;
+            cout << "Book Author: " << book[i].Author || newbook[i].Author << endl;
+            cout << "Book ISBN: " << book[i].ISBN || newbook[i].ISBN << endl;
+            cout << "Book Price: " << book[i].Price || newbook[i].Price << endl;
             found = true;
             break;
         }
@@ -120,8 +98,14 @@ int main()
 
     if (!found)
     {
-        cout << "Book with ISBN " << isbn << " not found." << endl;
+        cout << "Book with ISBN " << bookisbn << " not found." << endl;
     }
 
-    return 0;
+    float totalValue = 0;
+    for (int i = 0; i < num; i++)
+    {
+        totalValue totalValue + book[i].Price + newbook[i].Price;
+    }
+
+    cout << "Total value of the books in the inventory: " << totalValue << endl;
 }
